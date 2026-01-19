@@ -3,14 +3,21 @@
 
 #include <chrono>
 #include <thread>
+#include <iostream>
 
-
-int main() {
-
+int main(int argc, char* argv[]) {
+    const char* rom_file = "";
+    
     TerminalSet terminalSet;
     Chip8 chip8;
+
+    if (argc >= 2) {
+        rom_file = argv[1];
+    } else {
+        std::cout << "Usage: ./chip8 <romfile.ch8>\n";
+    }
     
-    if (!chip8.load_rom("roms/Pong1.ch8")) {
+    if (!chip8.load_rom(rom_file)) {
         return 1;
     }
     
