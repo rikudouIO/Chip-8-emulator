@@ -1,6 +1,6 @@
 # Chip-8 Emulator
 
-A simple Chip-8 interpreter/emulator written in C++ for educational purposes.
+A simple Chip-8 interpreter/emulator written in C++ for fun.
 
 ## Features
 - Full Chip-8 instruction set implementation
